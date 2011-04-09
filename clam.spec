@@ -11,7 +11,7 @@ Group: System/Libraries
 License: GPL
 Source: http://clam-project.org/download/src/CLAM-%{version}.tar.gz
 Patch1: %{name}-1.4.0-gcc46.patch
-BuildRequires: scons libxerces-c28-devel libid3_3.8_3-devel ladspa-devel
+BuildRequires: scons xerces-c28-devel libid3_3.8_3-devel ladspa-devel
 BuildRequires: libvorbis-devel libsndfile-devel libmad-devel libzlib-devel
 BuildRequires: libfftw-devel libportaudio-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
