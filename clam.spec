@@ -10,6 +10,7 @@ URL: http://clam-project.org/
 Group: System/Libraries
 License: GPL
 Source: http://clam-project.org/download/src/CLAM-%{version}.tar.gz
+Patch0: clam-1.4.0-lib64.patch
 Patch1: %{name}-1.4.0-gcc46.patch
 BuildRequires: scons xerces-c28-devel libid3-devel ladspa-devel
 BuildRequires: libvorbis-devel libsndfile-devel libmad-devel zlib-devel
@@ -50,6 +51,7 @@ libclam-processing and libclam-audioio.
 
 %prep
 %setup -q -n CLAM-%{version}
+%patch0 -p0 -b .lib64
 %patch1 -p1 -b .gcc46
 
 %build
@@ -58,7 +60,7 @@ scons configure \
   prefix=%{_prefix} \
   prefix_for_packaging=%{buildroot}%{_prefix} \
   release=yes
-scons
+%scons
 
 %install
 mkdir -p %{buildroot}%{_prefix}
