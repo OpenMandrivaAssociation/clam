@@ -4,7 +4,7 @@
 
 Name: clam
 Version: 1.4.0
-Release: 2
+Release: 3
 Summary: A C++ Library for Audio and Music
 URL: http://clam-project.org/
 Group: System/Libraries
@@ -40,6 +40,7 @@ libclam-processing and libclam-audioio.
 Group: Development/C
 Summary: Development components for CLAM
 Requires: %{libname} = %{version}-%{release}
+Requires: ladspa-devel
 Provides: lib%{name}-devel = %{version}-%{release}
 
 %description -n %{develname}
