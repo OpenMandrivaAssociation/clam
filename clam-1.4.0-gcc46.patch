@@ -1,0 +1,22 @@
+--- CLAM-1.4.0/src/Tools/MIDIIO/File/MIDISongPlayer.hxx.orig	2011-04-09 11:16:46.000000000 -0300
++++ CLAM-1.4.0/src/Tools/MIDIIO/File/MIDISongPlayer.hxx	2011-04-09 11:16:59.000000000 -0300
+@@ -21,6 +21,9 @@
+  * Maarten de Boer <mdeboer@iua.upf.es>
+  *
+  */
++
++#include <cstddef>
++
+ namespace MIDI
+ {
+ 
+--- CLAM-1.4.0/src/Standard/Connection.cxx.orig	2011-04-09 11:36:50.000000000 -0300
++++ CLAM-1.4.0/src/Standard/Connection.cxx	2011-04-09 11:37:10.000000000 -0300
+@@ -19,6 +19,7 @@
+  *
+  */
+ 
++#include <cstddef>
+ #include "Connection.hxx"
+ #include "Signal.hxx"
+ 

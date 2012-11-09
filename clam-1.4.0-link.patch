@@ -1,0 +1,10 @@
+--- scons/libs/clam_build_helpers.py.link	2011-04-10 12:56:11.000000000 +0200
++++ scons/libs/clam_build_helpers.py	2011-04-10 12:57:45.000000000 +0200
+@@ -271,6 +271,7 @@
+ 		linkername_lib = env.LinkerNameLink( linker_name, lib) # lib***.dylib     -> lib***.X.Y.Z.dylib
+ 
+ 	env.Append(CPPDEFINES=[('CLAM_MODULE',name)])
++	env.Append(LIBS=['dl'])
+ 
+ 	install_headers = env.Install( install_dirs.inc+'/CLAM', headers )
+ 	env.AddPostAction( install_headers, "chmod 644 $TARGET" )
