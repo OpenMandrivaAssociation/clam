@@ -6,7 +6,7 @@ Name: clam
 Version: 1.4.0
 Release: 3
 Summary: A C++ Library for Audio and Music
-URL: http://clam-project.org/
+URL: https://clam-project.org/
 Group: System/Libraries
 License: GPL
 Source: http://clam-project.org/download/src/CLAM-%{version}.tar.gz
